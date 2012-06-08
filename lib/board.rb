@@ -9,6 +9,8 @@ class Board
       "B" => Stack.new,
       "C" => Stack.new,
     } 
+    
+    @count = 0
   end
   
   #load initial game state
@@ -26,8 +28,9 @@ class Board
   #recursive algorithm to solve puzzle
   def hanoi(n, a, b, c)
     if(n <= 1)
+      @count = @count + 1
       b.push(a.pop)
-      puts "== move =="
+      puts "== move #{@count} =="
       print_state
       puts
     else
@@ -43,7 +46,7 @@ class Board
     puts "== Initial State =="
     print_state
     hanoi(n, @pegs["A"], @pegs["C"], @pegs["B"])
-    puts "== Done =="
+    puts "== Done in #{@count} moves =="
   end
   
   
