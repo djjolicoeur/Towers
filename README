@@ -1,4 +1,24 @@
 == Towers
 
 Simple example of the "Towers of Hanoi" puzzle using Stacks and recursion.
+that should always solve puzzle in 2^n-1 moves.
+
+TO RUN:
+
+pull down repository
+
+to run as ruby:
+    cd Towers/lib
+    ruby main.rb <number_of_discs>
+
+to run as jruby
+    cd Towers/lib
+    jruby main.rb <number_of_discs>
+
+to compile to .class and run on JVM
+    cd Towers/lib
+    jrubyc main.rb
+    java -cp .:/path/to/jruby.jar main
+
+
 
