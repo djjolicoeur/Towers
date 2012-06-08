@@ -28,7 +28,7 @@ class Board
   #recursive algorithm to solve puzzle
   def hanoi(n, a, b, c)
     if(n <= 1)
-      @count = @count + 1
+      @count += 1
       b.push(a.pop)
       puts "== move #{@count} =="
       print_state
