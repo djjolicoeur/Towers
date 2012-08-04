@@ -1,5 +1,5 @@
 # Board class
-require 'stack'
+require './stack'
 
 class Board
   #initialize hash of "pegs"
